@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>アンパンマンじゃんけんゲーム</title>
+</head>
+<body>
+
+    <header>
+        <h1>アンパンマンじゃんけんゲーム</h1>
+    </header>
+
+    <main>
+
+        <!-- Initial screen with game start message -->
+        <div id="start-screen">
+            <h1 id="game-title">アンパンマンじゃんけんゲーム</h1>
+            <h1 id="game-title">はじまるよ！</h1>
+            <button id="start-button">スタート！！</button>
+            <audio id="bgm" src="./anpanman.mp3" loop></audio>
+            <audio id="start-audio" src="./start.mp3"></audio>
+            <audio id="janken-audio" src="./jankenpon.mp3"></audio>
+            <audio id="rock-audio" src="./rock.wav"></audio>
+            <audio id="scissors-audio" src="./scissor.mp3"></audio>
+            <audio id="paper-audio" src="./paper.wav"></audio>
+        </div>
+
+        <!-- Game screen -->
+        <div id="game-screen" style="display:none;">
+            <div id="initial-message">
+                <h2>最初はグー！</h2>
+                <img src="https://illust8.com/wp-content/uploads/2018/07/janken_guu_illust_716-768x740.png" alt="グー" id="rock-initial">
+            </div>
+            <div id="janken-message" style="display:none;">
+                <h2>じゃんけん</h2>
+                <div id="choices">
+                    <div class="choice">
+                        <img src="https://illust8.com/wp-content/uploads/2018/07/janken_guu_illust_716-768x740.png" alt="グー" id="rock">
+                        <p>グー</p>
+                    </div>
+                    <div class="choice">
+                        <img src="https://illust8.com/wp-content/uploads/2018/07/yubi_peace_illust_708.png" alt="チョキ" id="scissors">
+                        <p>チョキ</p>
+                    </div>
+                    <div class="choice">
+                        <img src="https://illust8.com/wp-content/uploads/2018/07/janken_hand_illust_714-768x794.png" alt="パー" id="paper">
+                        <p>パー</p>
+                    </div>
+                </div>
+            </div>
+            <div id="result" style="display:none;">
+                <h2 id="result-message"></h2>
+                <div id="player-computer-choice">
+                    <div>
+                        <p>プレイヤー: <span id="player-choice-name"></span></p>
+                        <img id="player-choice-img" src="" alt="">
+                    </div>
+                    <div>
+                        <p>コンピュータ: <span id="computer-choice-name"></span></p>
+                        <img id="computer-choice-img" src="" alt="">
+                    </div>
+                </div>
+                <img id="result-image" src="" alt="Result Image">
+                <audio id="result-audio"></audio>
+            </div>
+        </div>
+    </main>
+
+    <footer>©やなせたかし/フレーベル館・TMS・NTV</footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
